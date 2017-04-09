@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyApplication23.iml" filepath="$PROJECT_DIR$/MyApplication23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotalib/kotalib.iml" filepath="$PROJECT_DIR$/kotalib/kotalib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mavpalib/mavpalib.iml" filepath="$PROJECT_DIR$/mavpalib/mavpalib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/omegalib/omegalib.iml" filepath="$PROJECT_DIR$/omegalib/omegalib.iml" />
+    </modules>
+  </component>
+</project>

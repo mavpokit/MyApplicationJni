@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 SyncResult syncResult;
                 syncResult = (SyncResult)jniSync();
                 if (syncResult!=null)
-                    Log.d("--syncResult--: ", syncResult.getBook()+" "+syncResult.getColl());
+                    Log.d("--syncResult--: ", Arrays.toString(syncResult.getBook())+" "+Arrays.toString(syncResult.getColl()));
 
             }
         });

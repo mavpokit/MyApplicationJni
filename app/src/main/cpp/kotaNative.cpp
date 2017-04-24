@@ -65,9 +65,17 @@ JNIEXPORT jobject JNICALL
 Java_com_mavpokit_myapplication_MainActivity_jniSync(JNIEnv *env, jobject instance){
     jclass clazz = env->FindClass("com/mavpokit/myapplication/SyncResult");
     if (NULL == clazz) return NULL;
-    jmethodID mid = env->GetMethodID(clazz, "<init>", "(JJ)V");
+    jmethodID mid = env->GetMethodID(clazz, "<init>", "([J[J)V");
     if (NULL == mid) return NULL;
-    return env->NewObject(clazz, mid, 5l, 7l);
+    jlong l1[]={1,2,3,4,5};
+    jlong l2[]={11,22,33,44,55};
+    jlongArray jlong1 = env->NewLongArray(5);
+    if (NULL==jlong1) return NULL;
+    env->SetLongArrayRegion(jlong1,0,5,l1);
+    jlongArray jlong2 = env->NewLongArray(5);
+    if (NULL==jlong2) return NULL;
+    env->SetLongArrayRegion(jlong2,0,5,l2);
+    return env->NewObject(clazz, mid, jlong1, jlong2);
 
 }
 

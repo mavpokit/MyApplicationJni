@@ -5,27 +5,27 @@ package com.mavpokit.myapplication;
  */
 
 public class SyncResult {
-    private long book;
-    private long coll;
+    private long book[];
+    private long coll[];
 
-    public SyncResult(long book, long coll) {
+    public SyncResult(long book[], long coll[]) {
         this.book = book;
         this.coll = coll;
     }
 
-    public long getBook() {
+    public long[] getBook() {
         return book;
     }
 
-    public long getColl() {
+    public long[] getColl() {
         return coll;
     }
 
-    public void setBook(long book) {
+    public void setBook(long book[]) {
         this.book = book;
     }
 
-    public void setColl(long coll) {
+    public void setColl(long coll[]) {
         this.coll = coll;
     }
 }

@@ -18,7 +18,8 @@ JNIEXPORT jdouble JNICALL
 JNIEXPORT jintArray JNICALL
         Java_com_mavpokit_myapplication_MainActivity_jniMultiply(JNIEnv *, jobject, jintArray, jint);
 
-
+JNIEXPORT jobject JNICALL
+        Java_com_mavpokit_myapplication_MainActivity_jniSync(JNIEnv *env, jobject instance);
 
 #ifdef __cplusplus
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyApplication23.iml" filepath="$PROJECT_DIR$/MyApplication23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JNIapp.iml" filepath="$PROJECT_DIR$/JNIapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotalib/kotalib.iml" filepath="$PROJECT_DIR$/kotalib/kotalib.iml" />
       <module fileurl="file://$PROJECT_DIR$/mavpalib/mavpalib.iml" filepath="$PROJECT_DIR$/mavpalib/mavpalib.iml" />

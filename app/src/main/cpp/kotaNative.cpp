@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string>
 #include <sstream>
+#include <android/log.h>
 
 
 JNIEXPORT jstring JNICALL
@@ -11,7 +12,7 @@ Java_com_mavpokit_myapplication_MainActivity_stringFromJNI(JNIEnv *env, jobject 
     const char *s2 = env->GetStringUTFChars(s1, NULL);
     std::string s2a = env->GetStringUTFChars(s1, NULL);
 
-    char s3a[] = " + String from JNI ";
+    char s3a[] = " + String from JNI ®";
     char s3b[50] = "aaaaaaaaaaaaaaaa";
 
     s2a += s3a;
@@ -22,8 +23,14 @@ Java_com_mavpokit_myapplication_MainActivity_stringFromJNI(JNIEnv *env, jobject 
     ss << i2;
     std::string s(ss.str());
     s2a += s;
+    s2a+=s2;
 
     strcat(s3b, s3a);
+
+    #define APPNAME "*****"
+
+    __android_log_print(ANDROID_LOG_VERBOSE, APPNAME, s2 , 1);
+
 
 
     jsize j2;
@@ -53,6 +60,17 @@ Java_com_mavpokit_myapplication_MainActivity_jniMultiply(JNIEnv *env, jobject th
 
     return out;
 }
+
+JNIEXPORT jobject JNICALL
+Java_com_mavpokit_myapplication_MainActivity_jniSync(JNIEnv *env, jobject instance){
+    jclass clazz = env->FindClass("com/mavpokit/myapplication/SyncResult");
+    if (NULL == clazz) return NULL;
+    jmethodID mid = env->GetMethodID(clazz, "<init>", "(JJ)V");
+    if (NULL == mid) return NULL;
+    return env->NewObject(clazz, mid, 5l, 7l);
+
+}
+
 
 
 //for pure C
